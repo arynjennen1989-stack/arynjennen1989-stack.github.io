@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arynjennen1989-stack.github.io/sitemap.xml
