@@ -1,60 +1,86 @@
 :root {
-  --ink: #1c1917;
-  --muted: #57534e;
-  --bg: #faf7f2;
+  --ink: #0f172a;
+  --muted: #475569;
+  --bg: #f8fafc;
   --card: #fff;
-  --line: #e7e0d6;
-  --accent: #0f766e;
-  --accent-ink: #115e59;
+  --line: #e2e8f0;
+  --ok: #047857;
+  --warn: #b45309;
+  --bad: #b91c1c;
+  --accent: #1d4ed8;
 }
 * { box-sizing: border-box; }
-html { font-size: 18px; }
+html { font-size: 17px; }
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.6;
+  line-height: 1.55;
 }
-a { color: var(--accent-ink); }
+a { color: var(--accent); }
 header, footer { background: #fff; border-bottom: 1px solid var(--line); }
-footer { border-top: 1px solid var(--line); border-bottom: 0; margin-top: 4rem; }
-.wrap { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1.25rem; }
+footer { border-top: 1px solid var(--line); border-bottom: 0; margin-top: 3.5rem; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 1.1rem 1.15rem; }
 nav { display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
-nav .brand { font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
-nav a { text-decoration: none; color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.9rem; }
-h1, h2, h3 { line-height: 1.25; letter-spacing: -0.02em; }
-h1 { font-size: 2rem; margin: 0.4rem 0 0.75rem; }
-.lede { font-size: 1.1rem; color: var(--muted); }
-.meta { font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--muted); }
-.cards { display: grid; gap: 1rem; margin: 2rem 0; }
+nav .brand { font-weight: 750; color: var(--ink); text-decoration: none; }
+nav a { text-decoration: none; color: var(--muted); font-size: 0.92rem; }
+h1 { font-size: 1.85rem; letter-spacing: -0.03em; margin: 0.35rem 0 0.7rem; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+.lede { font-size: 1.05rem; color: var(--muted); }
+.meta { font-size: 0.82rem; color: var(--muted); }
+.disclaimer {
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: #fff;
+  border: 1px dashed var(--line);
+  padding: 0.75rem 0.9rem;
+}
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.4rem;
+  border-radius: 999px;
+}
+.tag-free { background: #d1fae5; color: var(--ok); }
+.tag-promo { background: #ffedd5; color: var(--warn); }
+.tag-dead { background: #fee2e2; color: var(--bad); }
+.cards { display: grid; gap: 0.85rem; margin: 1.4rem 0; }
+@media (min-width: 720px) { .cards { grid-template-columns: 1fr 1fr; } }
 .card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 1rem 1.1rem;
+  padding: 0.95rem 1rem;
 }
-.card h2 { margin-top: 0; font-size: 1.2rem; }
-.btn {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  padding: 0.55rem 0.9rem;
+.card h2, .card h3 { margin: 0.2rem 0 0.45rem; font-size: 1.05rem; }
+.finder { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1rem; }
+.finder label { display: block; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.35rem; }
+.row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.row input {
+  flex: 1 1 12rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--line);
   border-radius: 8px;
-  font-family: system-ui, sans-serif;
-  font-size: 0.95rem;
+  font: inherit;
 }
-ul.plain { padding-left: 1.2rem; }
-.disclaimer {
-  font-family: system-ui, sans-serif;
-  font-size: 0.85rem;
-  color: var(--muted);
-  background: #fff;
-  border: 1px dashed var(--line);
-  padding: 0.8rem 1rem;
+.row button {
+  background: var(--ink);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
 }
-article p { margin: 0.9rem 0; }
-article h2 { margin-top: 2rem; }
-.faq dt { font-weight: 700; margin-top: 1rem; }
-.faq dd { margin: 0.3rem 0 0; }
+#results { margin-top: 0.85rem; }
+#results li { margin: 0.35rem 0; }
+ul.plain { padding-left: 1.15rem; }
+article p { margin: 0.8rem 0; }

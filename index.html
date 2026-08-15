@@ -3,24 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Week One Gigs — first remote paycheck, no fluff</title>
-  <meta name="description" content="Plain guides to the first remote gigs that actually pay beginners: user testing, research studies, and online tutoring. No courses. No bots.">
+  <title>Zero Dollar Domains — still-free names, not leftover .coms</title>
+  <meta name="description" content="A living list of programs that still give a $0 domain or subdomain in 2026. EU.org, is-a.dev, GitHub Pages, FreeDNS. Freenom is dead.">
   <link rel="canonical" href="https://arynjennen1989-stack.github.io/">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Week One Gigs — first remote paycheck, no fluff">
-  <meta property="og:description" content="Guides to the first remote gigs that actually pay beginners.">
+  <meta property="og:title" content="Zero Dollar Domains — still-free names">
+  <meta property="og:description" content="Programs that still give a $0 domain. No leftover .com pile. Freenom is dead.">
   <meta property="og:url" content="https://arynjennen1989-stack.github.io/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/assets/style.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Week One Gigs","url":"https://arynjennen1989-stack.github.io/","description":"Guides to first remote gigs that pay beginners."}
+  {"@context":"https://schema.org","@type":"WebSite","name":"Zero Dollar Domains","url":"https://arynjennen1989-stack.github.io/","description":"Catalog of programs that still give a $0 domain or subdomain."}
   </script>
 </head>
 <body>
   <header>
     <div class="wrap">
       <nav>
-        <a class="brand" href="/">Week One Gigs</a>
+        <a class="brand" href="/">Zero Dollar Domains</a>
+        <a href="/#list">The list</a>
         <a href="/guides/">Guides</a>
         <a href="/about.html">About</a>
       </nav>
@@ -28,30 +29,132 @@
   </header>
   <main class="wrap">
     <p class="meta">Updated 15 August 2026</p>
-    <h1>Get a first remote paycheck this month. Not a career plan.</h1>
-    <p class="lede">Most “make money online” pages sell a course. These pages tell you which platforms pay beginners, what they actually pay, and the one thing that gets you approved.</p>
-    <p class="disclaimer">No signup fees. No follower-buying. No guaranteed income. If a site asks you to pay to start, close the tab.</p>
+    <h1>Find a name that costs $0. Not a leftover .com.</h1>
+    <p class="lede">There is no public dump of abandoned <code>.com</code> names you can grab for free. Freenom’s free <code>.tk</code> factory shut down in 2024. What still exists: programs that hand out a subdomain, or a third-level name, at no charge.</p>
+    <p class="disclaimer">This site lists those programs and checks a few of them live. It does not mass-register names, does not scrape registrar aftermarkets, and does not sell “expired premium” junk.</p>
+
+    <section class="finder" id="finder">
+      <label for="slug">Type a short name (letters, numbers, hyphen)</label>
+      <div class="row">
+        <input id="slug" maxlength="40" placeholder="myproject" autocomplete="off">
+        <button type="button" id="go">See what’s free</button>
+      </div>
+      <ul id="results"></ul>
+    </section>
+
+    <h2 id="list">The list (still $0)</h2>
+    <table>
+      <thead>
+        <tr><th>Program</th><th>You get</th><th>Cost</th><th>Catch</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://nic.eu.org/">EU.org</a></td>
+          <td>something.eu.org</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>Manual review, often ~14 days. Not the EU.</td>
+        </tr>
+        <tr>
+          <td><a href="https://is-a.dev/">is-a.dev</a></td>
+          <td>you.is-a.dev</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>GitHub pull request. Devs only.</td>
+        </tr>
+        <tr>
+          <td><a href="https://pages.github.com/">GitHub Pages</a></td>
+          <td>you.github.io</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>Tied to your GitHub username.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.netlify.com/">Netlify</a></td>
+          <td>you.netlify.app</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>Free-tier bandwidth cap.</td>
+        </tr>
+        <tr>
+          <td><a href="https://freedns.afraid.org/">FreeDNS</a></td>
+          <td>you.someshareddomain</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>Public domains look random. Good for testing.</td>
+        </tr>
+        <tr>
+          <td><a href="https://js.org/">js.org</a></td>
+          <td>you.js.org</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>JavaScript projects only. No personal blogs.</td>
+        </tr>
+        <tr>
+          <td><a href="https://thedev.id/">thedev.id</a></td>
+          <td>you.thedev.id</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>Developer subdomain, GitHub signup.</td>
+        </tr>
+        <tr>
+          <td>Freenom .tk / .cf / .gq</td>
+          <td>—</td>
+          <td><span class="tag tag-dead">dead</span></td>
+          <td>Free regs ended 2024. Paid again in 2026. Skip.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="cards">
       <article class="card">
-        <h2>User testing sites that pay beginners</h2>
-        <p>You talk through a website or app. PayPal later. Work is lumpy, not a job. Start here if you have a laptop and a microphone.</p>
-        <a class="btn" href="/guides/user-testing-sites-that-pay-beginners.html">Read the guide</a>
+        <h3>How to get a free eu.org domain</h3>
+        <p>The closest thing left to a real, forever-free domain that is not a platform subdomain.</p>
+        <a href="/guides/how-to-get-a-free-eu-org-domain.html">Read the walkthrough</a>
       </article>
       <article class="card">
-        <h2>What this site is for</h2>
-        <p>People who need cash in week one, not a personal brand. We only cover platforms that are free to join and pay real money.</p>
-        <a href="/about.html">How we pick platforms</a>
+        <h3>Why “scrape $0 domains” is a dead idea</h3>
+        <p>Expired .coms go to auction. Freenom is gone. Year-1 “free” hosting domains bill you in month 13.</p>
+        <a href="/guides/there-are-no-free-leftover-dotcoms.html">Read why</a>
       </article>
     </div>
-
-    <h2>The rule</h2>
-    <p>Sign up for more than one platform. One dashboard goes quiet for days. Three dashboards is how you get a first test this week.</p>
   </main>
   <footer>
     <div class="wrap">
-      <p>Week One Gigs · Independent guides · Not affiliated with UserTesting, Respondent, Userbrain, or Preply.</p>
+      <p>Zero Dollar Domains · Independent list · We do not register names for you · Not affiliated with EU.org, GitHub, or is-a.dev.</p>
     </div>
   </footer>
+  <script>
+    const input = document.getElementById("slug");
+    const out = document.getElementById("results");
+    const clean = (s) => (s || "").toLowerCase().trim().replace(/[^a-z0-9-]/g, "");
+
+    async function checkIsADev(slug) {
+      const url = "https://raw.githubusercontent.com/is-a-dev/register/main/domains/" + slug + ".json";
+      try {
+        const r = await fetch(url, { cache: "no-store" });
+        if (r.status === 404) return "likely free";
+        if (r.ok) return "taken";
+        return "could not check";
+      } catch (e) {
+        return "could not check";
+      }
+    }
+
+    async function run() {
+      const slug = clean(input.value);
+      if (!slug || slug.length < 2) {
+        out.innerHTML = "<li>Type at least 2 characters.</li>";
+        return;
+      }
+      out.innerHTML = "<li>Checking…</li>";
+      const isa = await checkIsADev(slug);
+      const rows = [
+        [slug + ".eu.org", "request at nic.eu.org (manual review)", "https://nic.eu.org/"],
+        [slug + ".is-a.dev", isa, "https://is-a.dev/"],
+        [slug + ".github.io", "free if that GitHub username exists and the Pages repo is yours", "https://pages.github.com/"],
+        [slug + ".netlify.app", "pick it in a free Netlify project", "https://www.netlify.com/"],
+        [slug + ".js.org", "only if you have a JavaScript project", "https://js.org/"]
+      ];
+      out.innerHTML = rows.map(function (r) {
+        return "<li><strong>" + r[0] + "</strong> — " + r[1] + ' · <a href="' + r[2] + '">program</a></li>';
+      }).join("");
+    }
+    document.getElementById("go").addEventListener("click", run);
+    input.addEventListener("keydown", function (e) { if (e.key === "Enter") run(); });
+  </script>
 </body>
 </html>

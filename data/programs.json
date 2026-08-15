@@ -1,0 +1,116 @@
+{
+  "updated": "2026-08-15",
+  "note": "Forever-free means no registration fee. You do not get a leftover .com. Freenom (.tk/.cf/.gq/.ga/.ml free regs) ended in 2024.",
+  "programs": [
+    {
+      "id": "eu-org",
+      "name": "EU.org",
+      "suffix": "eu.org",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone; aimed at people and nonprofits who cannot pay a NIC",
+      "how": "Request at nic.eu.org. Approval often takes about two weeks. Not the European Union.",
+      "url": "https://nic.eu.org/",
+      "check": null
+    },
+    {
+      "id": "is-a-dev",
+      "name": "is-a.dev",
+      "suffix": "is-a.dev",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Developers with a GitHub account",
+      "how": "Open a pull request on the is-a-dev/register repo. Check the box on this page first.",
+      "url": "https://is-a.dev/",
+      "check": "https://raw.githubusercontent.com/is-a-dev/register/main/domains/{slug}.json"
+    },
+    {
+      "id": "js-org",
+      "name": "js.org",
+      "suffix": "js.org",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "JavaScript projects only — they turned down personal blogs",
+      "how": "Pull request on js-org/js.org. Need a real JS project.",
+      "url": "https://js.org/",
+      "check": null
+    },
+    {
+      "id": "github-pages",
+      "name": "GitHub Pages",
+      "suffix": "github.io",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone with a free GitHub account",
+      "how": "Create a repo named youruser.github.io. That is this site's host.",
+      "url": "https://pages.github.com/",
+      "check": "https://github.com/{slug}"
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "suffix": "netlify.app",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone; bandwidth limits on free tier",
+      "how": "Deploy a site, pick a subdomain in the Netlify UI.",
+      "url": "https://www.netlify.com/",
+      "check": null
+    },
+    {
+      "id": "freedns",
+      "name": "FreeDNS (afraid.org)",
+      "suffix": "many shared domains",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone; public shared domains get a random-looking host",
+      "how": "Sign up at freedns.afraid.org and claim a subdomain on a shared domain.",
+      "url": "https://freedns.afraid.org/",
+      "check": null
+    },
+    {
+      "id": "pp-ua",
+      "name": "pp.ua",
+      "suffix": "pp.ua",
+      "kind": "forever-free",
+      "cost": "$0",
+      "who": "Anyone who can complete their form",
+      "how": "Request a subdomain at the pp.ua registry pages.",
+      "url": "https://pp.ua/",
+      "check": null
+    },
+    {
+      "id": "thedev-id",
+      "name": "thedev.id",
+      "suffix": "thedev.id",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Developers",
+      "how": "GitHub registration flow similar to is-a.dev.",
+      "url": "https://thedev.id/",
+      "check": null
+    },
+    {
+      "id": "open-domains",
+      "name": "Open Domains",
+      "suffix": "is-a-fullstack.dev and others",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Personal sites and open-source projects",
+      "how": "See open-domains.net / their GitHub register repo.",
+      "url": "https://open-domains.net/",
+      "check": null
+    },
+    {
+      "id": "freenom",
+      "name": "Freenom (.tk .cf .gq .ga .ml)",
+      "suffix": "tk / cf / gq / ga / ml",
+      "kind": "dead",
+      "cost": "Not free anymore",
+      "who": "Nobody — free regs ended 2024 after Meta sued. 2026: paid again, not $0.",
+      "how": "Do not chase leftover Freenom names. They are not a free pile.",
+      "url": "https://www.freenom.com/",
+      "check": null
+    }
+  ]
+}
