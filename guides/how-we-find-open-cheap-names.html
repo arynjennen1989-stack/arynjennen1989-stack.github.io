@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How we find open cheap domain names</title>
+  <meta name="description" content="RDAP 404 means a name is not in the registry. That is how this site hunts unused cheap TLDs. It is not an expired-.com scrape.">
+  <link rel="canonical" href="https://arynjennen1989-stack.github.io/guides/how-we-find-open-cheap-names.html">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How we find open cheap domain names","datePublished":"2026-08-15","dateModified":"2026-08-15","author":{"@type":"Person","name":"Aryn Jennen"}}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">Zero Dollar Domains</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <article>
+      <p class="meta">Guide · Last updated 15 August 2026</p>
+      <h1>How we find open cheap names</h1>
+      <p>You asked for lost, dead, or “repoed” names that are still free or cheap. Here is the honest version of that hunt.</p>
+
+      <h2>Three different piles people mix up</h2>
+      <ul class="plain">
+        <li><strong>Never registered</strong> on a cheap ending (<code>.xyz</code>, <code>.icu</code>, <code>.top</code>). The registry has no record. First year is often about a dollar. Renewal is not $0.</li>
+        <li><strong>Registered but dark</strong> — the name exists, DNS has no nameservers. That is “dead” in the street sense. It is not free. The owner still has it until it expires and goes through deletion or auction.</li>
+        <li><strong>Expired .com / .net</strong> — drop lists and auctions. Not $0. We do not scrape those.</li>
+      </ul>
+
+      <h2>What the hunter actually does</h2>
+      <p>For a word you type, the page asks each registry’s public <strong>RDAP</strong> server (the official replacement for WHOIS):</p>
+      <ul class="plain">
+        <li>HTTP <strong>404</strong> → no domain object → we label it <em>open</em>.</li>
+        <li>HTTP <strong>200</strong> → registered → we label it <em>taken</em>.</li>
+      </ul>
+      <p>Then it asks Cloudflare DNS-over-HTTPS for NS records. Status 3 (NXDOMAIN) and no NS means the name is dark. That is useful color. It does not make a taken name free.</p>
+      <p>The snapshot list on the home page is the same check, run on a word list, saved as <a href="/data/open-cheap.json"><code>/data/open-cheap.json</code></a>. It goes stale. Type the name in the hunter before you spend anything.</p>
+
+      <h2>What we will not do</h2>
+      <ul class="plain">
+        <li>Pull ExpiredDomains, NameJet, or SnapNames dumps.</li>
+        <li>Mass-register names into anyone’s account.</li>
+        <li>Pretend Freenom leftovers are a $0 warehouse. Free regs ended in 2024.</li>
+      </ul>
+      <p>If you want $0 forever, use <a href="/guides/how-to-get-a-free-eu-org-domain.html">eu.org</a> or a platform subdomain. If you want a real TLD for pocket change, use the <a href="/#hunt">hunter</a> and read the renewal price at the registrar before you click buy.</p>
+    </article>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>RDAP servers come from IANA’s bootstrap file. We do not invent availability.</p>
+    </div>
+  </footer>
+</body>
+</html>

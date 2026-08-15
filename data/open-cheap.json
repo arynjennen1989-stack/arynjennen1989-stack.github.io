@@ -1,0 +1,38 @@
+{
+  "updated": "2026-08-15",
+  "method": "RDAP GET /domain/{name}. HTTP 404 = not in the registry (available). HTTP 200 = registered. Snapshot only — re-check before you pay.",
+  "disclaimer": "These are unused cheap TLDs, not leftover .coms and not auction drops. Year-1 promo prices move. Renewals are not $0.",
+  "tlds": [
+    {"tld": "xyz", "rdap": "https://rdap.centralnic.com/xyz", "year1": "often ~$1–3 promo", "renew": "usually more than year 1"},
+    {"tld": "icu", "rdap": "https://rdap.centralnic.com/icu", "year1": "often under $2 promo", "renew": "check before you buy"},
+    {"tld": "lol", "rdap": "https://rdap.centralnic.com/lol", "year1": "often cheap promo", "renew": "check before you buy"},
+    {"tld": "online", "rdap": "https://rdap.radix.host/rdap", "year1": "sometimes $0.99", "renew": "can jump hard (~$30+)"},
+    {"tld": "top", "rdap": "https://rdap.zdnsgtld.com/top", "year1": "sometimes $0.99", "renew": "often ~$5–7"}
+  ],
+  "open": [
+    "amberly.icu",
+    "amberly.lol",
+    "amberly.online",
+    "bricklot.xyz",
+    "bricklot.icu",
+    "bricklot.lol",
+    "bricklot.online",
+    "bricklot.top",
+    "coldwellx.xyz",
+    "coldwellx.icu",
+    "coldwellx.lol",
+    "coldwellx.online",
+    "coldwellx.top",
+    "duskpin.xyz",
+    "duskpin.icu",
+    "duskpin.lol",
+    "duskpin.online",
+    "duskpin.top",
+    "emberly.icu",
+    "fogbank.icu",
+    "fogbank.lol",
+    "fogbank.online",
+    "fogbank.top",
+    "gravelly.xyz"
+  ]
+}

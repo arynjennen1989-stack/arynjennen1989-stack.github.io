@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zero Dollar Domains — still-free names, not leftover .coms</title>
-  <meta name="description" content="A living list of programs that still give a $0 domain or subdomain in 2026. EU.org, is-a.dev, GitHub Pages, FreeDNS. Freenom is dead.">
+  <title>Zero Dollar Domains — lost, dead, and cheap names you can still grab</title>
+  <meta name="description" content="Hunt names that are still unregistered on cheap TLDs, plus $0 programs (eu.org, is-a.dev). Live RDAP check. Not an expired-.com auction dump.">
   <link rel="canonical" href="https://arynjennen1989-stack.github.io/">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Zero Dollar Domains — still-free names">
-  <meta property="og:description" content="Programs that still give a $0 domain. No leftover .com pile. Freenom is dead.">
+  <meta property="og:title" content="Zero Dollar Domains — lost, dead, and cheap names">
+  <meta property="og:description" content="Live check for unused cheap TLDs and still-free subdomain programs.">
   <meta property="og:url" content="https://arynjennen1989-stack.github.io/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/assets/style.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Zero Dollar Domains","url":"https://arynjennen1989-stack.github.io/","description":"Catalog of programs that still give a $0 domain or subdomain."}
+  {"@context":"https://schema.org","@type":"WebSite","name":"Zero Dollar Domains","url":"https://arynjennen1989-stack.github.io/","description":"Hunt unused cheap domain names and still-free subdomain programs."}
   </script>
 </head>
 <body>
@@ -21,7 +21,9 @@
     <div class="wrap">
       <nav>
         <a class="brand" href="/">Zero Dollar Domains</a>
-        <a href="/#list">The list</a>
+        <a href="/#hunt">Hunter</a>
+        <a href="/#open">Open cheap</a>
+        <a href="/#list">$0 programs</a>
         <a href="/guides/">Guides</a>
         <a href="/about.html">About</a>
       </nav>
@@ -29,20 +31,31 @@
   </header>
   <main class="wrap">
     <p class="meta">Updated 15 August 2026</p>
-    <h1>Find a name that costs $0. Not a leftover .com.</h1>
-    <p class="lede">There is no public dump of abandoned <code>.com</code> names you can grab for free. Freenom’s free <code>.tk</code> factory shut down in 2024. What still exists: programs that hand out a subdomain, or a third-level name, at no charge.</p>
-    <p class="disclaimer">This site lists those programs and checks a few of them live. It does not mass-register names, does not scrape registrar aftermarkets, and does not sell “expired premium” junk.</p>
+    <h1>Lost, dead, or cheap. Not a leftover .com pile.</h1>
+    <p class="lede">Type a word. We ask the official registry (RDAP) if that name is still unregistered on cheap endings, and we check DNS to see if a taken name is actually dead. $0 forever still only exists as subdomains and eu.org.</p>
+    <p class="disclaimer">Expired .coms go to auction. We do not scrape those lists. “Open” on .xyz/.icu/.top means you can register it — usually about a dollar the first year, then a renewal. Re-check before you pay. We never register names for you.</p>
 
-    <section class="finder" id="finder">
-      <label for="slug">Type a short name (letters, numbers, hyphen)</label>
+    <section class="finder" id="hunt">
+      <label for="slug">Word to hunt (letters, numbers, hyphen)</label>
       <div class="row">
-        <input id="slug" maxlength="40" placeholder="myproject" autocomplete="off">
-        <button type="button" id="go">See what’s free</button>
+        <input id="slug" maxlength="40" placeholder="bricklot" autocomplete="off">
+        <button type="button" id="go">Hunt</button>
       </div>
-      <ul id="results"></ul>
+      <p class="meta" id="status"></p>
+      <table id="hunt-table" hidden>
+        <thead>
+          <tr><th>Name</th><th>Registry</th><th>DNS</th><th>What that means</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </section>
 
-    <h2 id="list">The list (still $0)</h2>
+    <h2 id="open">Open cheap names (snapshot)</h2>
+    <p class="meta" id="snap-meta">Loading last RDAP scan…</p>
+    <ul id="open-list" class="plain"></ul>
+    <p><a href="/guides/how-we-find-open-cheap-names.html">How this list is built</a></p>
+
+    <h2 id="list">Still $0 forever</h2>
     <table>
       <thead>
         <tr><th>Program</th><th>You get</th><th>Cost</th><th>Catch</th></tr>
@@ -67,94 +80,166 @@
           <td>Tied to your GitHub username.</td>
         </tr>
         <tr>
-          <td><a href="https://www.netlify.com/">Netlify</a></td>
-          <td>you.netlify.app</td>
-          <td><span class="tag tag-free">$0 forever</span></td>
-          <td>Free-tier bandwidth cap.</td>
-        </tr>
-        <tr>
           <td><a href="https://freedns.afraid.org/">FreeDNS</a></td>
           <td>you.someshareddomain</td>
           <td><span class="tag tag-free">$0 forever</span></td>
-          <td>Public domains look random. Good for testing.</td>
-        </tr>
-        <tr>
-          <td><a href="https://js.org/">js.org</a></td>
-          <td>you.js.org</td>
-          <td><span class="tag tag-free">$0 forever</span></td>
-          <td>JavaScript projects only. No personal blogs.</td>
-        </tr>
-        <tr>
-          <td><a href="https://thedev.id/">thedev.id</a></td>
-          <td>you.thedev.id</td>
-          <td><span class="tag tag-free">$0 forever</span></td>
-          <td>Developer subdomain, GitHub signup.</td>
+          <td>Public domains look random.</td>
         </tr>
         <tr>
           <td>Freenom .tk / .cf / .gq</td>
           <td>—</td>
           <td><span class="tag tag-dead">dead</span></td>
-          <td>Free regs ended 2024. Paid again in 2026. Skip.</td>
+          <td>Free regs ended 2024. Skip.</td>
         </tr>
       </tbody>
     </table>
 
     <div class="cards">
       <article class="card">
-        <h3>How to get a free eu.org domain</h3>
-        <p>The closest thing left to a real, forever-free domain that is not a platform subdomain.</p>
-        <a href="/guides/how-to-get-a-free-eu-org-domain.html">Read the walkthrough</a>
+        <h3>How we find open cheap names</h3>
+        <p>RDAP 404 means the registry has no record. That is “available,” not “expired premium.”</p>
+        <a href="/guides/how-we-find-open-cheap-names.html">Read the method</a>
       </article>
       <article class="card">
-        <h3>Why “scrape $0 domains” is a dead idea</h3>
-        <p>Expired .coms go to auction. Freenom is gone. Year-1 “free” hosting domains bill you in month 13.</p>
-        <a href="/guides/there-are-no-free-leftover-dotcoms.html">Read why</a>
+        <h3>How to get a free eu.org domain</h3>
+        <p>The closest thing left to a forever-free domain you control the DNS on.</p>
+        <a href="/guides/how-to-get-a-free-eu-org-domain.html">Read the walkthrough</a>
       </article>
     </div>
   </main>
   <footer>
     <div class="wrap">
-      <p>Zero Dollar Domains · Independent list · We do not register names for you · Not affiliated with EU.org, GitHub, or is-a.dev.</p>
+      <p>Zero Dollar Domains · We do not register names · RDAP checks hit the official registry, not a reseller.</p>
     </div>
   </footer>
   <script>
+    const TLDS = [
+      { tld: "xyz", rdap: "https://rdap.centralnic.com/xyz", kind: "cheap" },
+      { tld: "icu", rdap: "https://rdap.centralnic.com/icu", kind: "cheap" },
+      { tld: "lol", rdap: "https://rdap.centralnic.com/lol", kind: "cheap" },
+      { tld: "online", rdap: "https://rdap.radix.host/rdap", kind: "cheap" },
+      { tld: "top", rdap: "https://rdap.zdnsgtld.com/top", kind: "cheap" },
+      { tld: "com", rdap: "https://rdap.verisign.com/com/v1", kind: "paid" }
+    ];
     const input = document.getElementById("slug");
-    const out = document.getElementById("results");
-    const clean = (s) => (s || "").toLowerCase().trim().replace(/[^a-z0-9-]/g, "");
+    const status = document.getElementById("status");
+    const table = document.getElementById("hunt-table");
+    const tbody = table.querySelector("tbody");
+
+    function clean(s) {
+      return (s || "").toLowerCase().trim().replace(/[^a-z0-9-]/g, "");
+    }
+    function esc(s) {
+      return String(s).replace(/[&<>"]/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+      });
+    }
+
+    async function rdap(base, name) {
+      try {
+        const r = await fetch(base.replace(/\/$/, "") + "/domain/" + name, {
+          headers: { Accept: "application/rdap+json" }
+        });
+        if (r.status === 404) return "open";
+        if (r.status === 200) return "registered";
+        return "unknown";
+      } catch (e) {
+        return "blocked";
+      }
+    }
+
+    async function dns(name) {
+      try {
+        const r = await fetch(
+          "https://cloudflare-dns.com/dns-query?name=" + encodeURIComponent(name) + "&type=NS",
+          { headers: { accept: "application/dns-json" } }
+        );
+        const d = await r.json();
+        if (d.Status === 3) return "no NS (dead / never used)";
+        if (d.Status === 0 && (d.Answer || []).length) return "has nameservers";
+        return "no useful DNS";
+      } catch (e) {
+        return "dns check failed";
+      }
+    }
 
     async function checkIsADev(slug) {
-      const url = "https://raw.githubusercontent.com/is-a-dev/register/main/domains/" + slug + ".json";
       try {
-        const r = await fetch(url, { cache: "no-store" });
-        if (r.status === 404) return "likely free";
-        if (r.ok) return "taken";
-        return "could not check";
+        const r = await fetch(
+          "https://raw.githubusercontent.com/is-a-dev/register/main/domains/" + slug + ".json",
+          { cache: "no-store" }
+        );
+        if (r.status === 404) return "open on is-a.dev";
+        if (r.ok) return "taken on is-a.dev";
+        return "could not check is-a.dev";
       } catch (e) {
-        return "could not check";
+        return "could not check is-a.dev";
       }
     }
 
-    async function run() {
+    function meaning(reg, dnsText, kind) {
+      if (reg === "open" && kind === "cheap") return "Unregistered. Cheap first year, not $0 forever.";
+      if (reg === "open" && kind === "paid") return "Unregistered .com — still costs a registrar fee.";
+      if (reg === "registered" && dnsText.indexOf("no NS") !== -1) return "Registered but dark. Not free. Owner still has it.";
+      if (reg === "registered") return "Someone has it.";
+      return "Could not finish the check.";
+    }
+
+    async function hunt() {
       const slug = clean(input.value);
       if (!slug || slug.length < 2) {
-        out.innerHTML = "<li>Type at least 2 characters.</li>";
+        status.textContent = "Type at least 2 characters.";
         return;
       }
-      out.innerHTML = "<li>Checking…</li>";
+      status.textContent = "Asking registries…";
+      table.hidden = false;
+      tbody.innerHTML = "";
       const isa = await checkIsADev(slug);
-      const rows = [
-        [slug + ".eu.org", "request at nic.eu.org (manual review)", "https://nic.eu.org/"],
-        [slug + ".is-a.dev", isa, "https://is-a.dev/"],
-        [slug + ".github.io", "free if that GitHub username exists and the Pages repo is yours", "https://pages.github.com/"],
-        [slug + ".netlify.app", "pick it in a free Netlify project", "https://www.netlify.com/"],
-        [slug + ".js.org", "only if you have a JavaScript project", "https://js.org/"]
-      ];
-      out.innerHTML = rows.map(function (r) {
-        return "<li><strong>" + r[0] + "</strong> — " + r[1] + ' · <a href="' + r[2] + '">program</a></li>';
-      }).join("");
+      tbody.insertAdjacentHTML(
+        "beforeend",
+        "<tr><td><strong>" + esc(slug) + ".is-a.dev</strong></td><td>" + esc(isa) +
+          "</td><td>—</td><td>$0 if open. GitHub PR.</td></tr>"
+      );
+      tbody.insertAdjacentHTML(
+        "beforeend",
+        "<tr><td><strong>" + esc(slug) + ".eu.org</strong></td><td>request</td><td>—</td>" +
+          "<td>$0 forever if nic.eu.org approves. Manual, ~2 weeks.</td></tr>"
+      );
+      for (const spec of TLDS) {
+        const name = slug + "." + spec.tld;
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td><strong>" + esc(name) + "</strong></td><td>…</td><td>…</td><td></td>";
+        tbody.appendChild(tr);
+        const cells = tr.children;
+        const [reg, dnsText] = await Promise.all([rdap(spec.rdap, name), dns(name)]);
+        cells[1].textContent = reg;
+        cells[2].textContent = dnsText;
+        cells[3].textContent = meaning(reg, dnsText, spec.kind);
+        if (reg === "open") cells[1].innerHTML = '<span class="tag tag-free">open</span>';
+        if (reg === "registered") cells[1].innerHTML = '<span class="tag tag-dead">taken</span>';
+      }
+      status.textContent = "Done. Open ≠ leftover auction name. Buy only if you will use it.";
     }
-    document.getElementById("go").addEventListener("click", run);
-    input.addEventListener("keydown", function (e) { if (e.key === "Enter") run(); });
+
+    document.getElementById("go").addEventListener("click", hunt);
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") hunt();
+    });
+
+    fetch("/data/open-cheap.json")
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        document.getElementById("snap-meta").textContent =
+          "Last scan " + d.updated + " · " + (d.open || []).length +
+          " names were unregistered on cheap TLDs. Live-check any of them in the box above.";
+        document.getElementById("open-list").innerHTML = (d.open || [])
+          .map(function (n) { return "<li><code>" + esc(n) + "</code></li>"; })
+          .join("");
+      })
+      .catch(function () {
+        document.getElementById("snap-meta").textContent = "Snapshot failed to load.";
+      });
   </script>
 </body>
 </html>
