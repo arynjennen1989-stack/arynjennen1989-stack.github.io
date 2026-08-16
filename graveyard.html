@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Startup graveyard — which famous .coms actually dropped</title>
+  <meta name="description" content="Live RDAP check of dead-startup and brand .coms. gpt.com and droid.com are locked. We do not hunt lookalikes of living retailers.">
+  <link rel="canonical" href="https://arynjennen1989-stack.github.io/graveyard.html">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">Zero Dollar Domains</a>
+        <a href="/#hunt">Hunter</a>
+        <a href="/graveyard.html">Graveyard</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="meta">Checked 16 August 2026</p>
+    <h1>Famous names are almost never leftover.</h1>
+    <p class="lede"><code>gpt.com</code> is not sitting on a sidewalk. It is locked at MarkMonitor and sends people to ChatGPT. <code>droid.com</code> is a CSC corporate name that sends people to Star Wars. Dead startups usually keep the .com, park it, or sell it. They rarely let it drop.</p>
+    <p class="disclaimer">This page will look up a real .com for you. It will not hunt names that sound like living retailers (Walmart, Target, Amazon, and the rest). That is trademark squatting. I will not build that list.</p>
+
+    <section class="finder">
+      <label for="q">Look up a .com / .net / .org (the real name, not a lookalike)</label>
+      <div class="row">
+        <input id="q" maxlength="60" placeholder="homejoy.com" autocomplete="off">
+        <button type="button" id="go">Check</button>
+      </div>
+      <p class="meta" id="status"></p>
+      <table id="one" hidden>
+        <thead><tr><th>Name</th><th>Registry</th><th>Expires</th><th>Nameservers</th><th>Read</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <h2>Already checked</h2>
+    <table>
+      <thead><tr><th>Name</th><th>State</th><th>Expires</th><th>Note</th></tr></thead>
+      <tbody id="snap"></tbody>
+    </table>
+    <p><a href="/guides/dead-startups-keep-their-domains.html">Why shutdowns almost never free the .com</a></p>
+  </main>
+  <footer>
+    <div class="wrap"><p>RDAP is the official registry record. Taken ≠ cheap. Parked ≠ free.</p></div>
+  </footer>
+  <script>
+    const RDAP = {
+      com: "https://rdap.verisign.com/com/v1",
+      net: "https://rdap.verisign.com/net/v1",
+      org: "https://rdap.publicinterestregistry.org/rdap"
+    };
+    function esc(s) {
+      return String(s).replace(/[&<>"]/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+      });
+    }
+    function parseName(raw) {
+      var n = (raw || "").toLowerCase().trim().replace(/^https?:\/\//, "").replace(/\/.*$/, "");
+      if (!n.includes(".")) n += ".com";
+      if (!/^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.(com|net|org)$/.test(n)) return null;
+      return n;
+    }
+    async function lookup(name) {
+      var tld = name.split(".").pop();
+      var base = RDAP[tld];
+      var r = await fetch(base.replace(/\/$/, "") + "/domain/" + name, {
+        headers: { Accept: "application/rdap+json" }
+      });
+      if (r.status === 404) return { state: "open", expires: "—", ns: "—", read: "Unregistered. Still costs a registrar fee. Not leftover." };
+      if (r.status !== 200) return { state: "unknown", expires: "—", ns: "—", read: "Registry did not answer." };
+      var d = await r.json();
+      var exp = "—";
+      (d.events || []).forEach(function (ev) {
+        if (ev.eventAction === "expiration") exp = (ev.eventDate || "").slice(0, 10);
+      });
+      var ns = (d.nameservers || []).map(function (x) { return x.ldhName; }).slice(0, 2).join(", ") || "none listed";
+      var locked = (d.status || []).some(function (s) { return /server (delete|transfer) prohibited/i.test(s); });
+      var read = locked
+        ? "Corporate lock. This will not drop cheap."
+        : "Registered. Parked or live — still not free.";
+      return { state: "taken", expires: exp, ns: ns, read: read };
+    }
+
+    document.getElementById("go").addEventListener("click", run);
+    document.getElementById("q").addEventListener("keydown", function (e) { if (e.key === "Enter") run(); });
+
+    async function run() {
+      var name = parseName(document.getElementById("q").value);
+      var status = document.getElementById("status");
+      var table = document.getElementById("one");
+      var tb = table.querySelector("tbody");
+      if (!name) {
+        status.textContent = "Use a real name like homejoy.com — not a store lookalike.";
+        return;
+      }
+      status.textContent = "Asking the registry…";
+      table.hidden = false;
+      try {
+        var row = await lookup(name);
+        tb.innerHTML = "<tr><td><strong>" + esc(name) + "</strong></td><td>" +
+          (row.state === "open" ? '<span class="tag tag-free">open</span>' : '<span class="tag tag-dead">taken</span>') +
+          "</td><td>" + esc(row.expires) + "</td><td>" + esc(row.ns) + "</td><td>" + esc(row.read) + "</td></tr>";
+        status.textContent = "Done.";
+      } catch (e) {
+        status.textContent = "Check failed (browser or registry).";
+      }
+    }
+
+    fetch("/data/graveyard.json").then(function (r) { return r.json(); }).then(function (d) {
+      document.getElementById("snap").innerHTML = (d.names || []).map(function (n) {
+        return "<tr><td><code>" + esc(n.name) + "</code></td><td><span class=\"tag tag-dead\">" +
+          esc(n.state) + "</span></td><td>" + esc(n.expires) + "</td><td>" + esc(n.note) + "</td></tr>";
+      }).join("");
+    });
+  </script>
+</body>
+</html>
