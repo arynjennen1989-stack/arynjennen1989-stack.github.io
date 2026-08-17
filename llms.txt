@@ -1,0 +1,37 @@
+# Zero Dollar Domains
+
+> Catalog of programs that still give a $0 domain or subdomain, plus a live RDAP hunter for unused cheap-TLD names. Not an expired-.com auction dump. Not Freenom leftovers.
+
+Site: https://arynjennen1989-stack.github.io/
+
+## What this is
+
+- Live RDAP checks against official registries (404 = unregistered, not “expired premium”).
+- A snapshot of cheap-TLD names that were unregistered at last scan.
+- A graveyard of famous .coms that people assume dropped. They almost never did.
+- Honest split: forever-free (eu.org, is-a.dev, github.io, FreeDNS) vs year-1 cheap (.xyz / .icu / .top).
+
+## What this is not
+
+- A leftover-.com scraper or WHOIS dump.
+- A mass-registrar. We never register names for you.
+- Freenom. Free .tk / .cf / .gq / .ga / .ml registrations ended in 2024.
+
+## Pages
+
+- [Home / hunter](https://arynjennen1989-stack.github.io/): type a word, check cheap TLDs + DNS.
+- [Guides](https://arynjennen1989-stack.github.io/guides/): how to claim the $0 programs, and why leftover .coms are not free.
+- [Graveyard](https://arynjennen1989-stack.github.io/graveyard.html): live RDAP on famous shutdown .coms.
+- [About](https://arynjennen1989-stack.github.io/about.html)
+
+## Guides
+
+- [How to get a free eu.org domain](https://arynjennen1989-stack.github.io/guides/how-to-get-a-free-eu-org-domain.html)
+- [There is no pile of leftover $0 .coms](https://arynjennen1989-stack.github.io/guides/there-are-no-free-leftover-dotcoms.html)
+- [How we find open cheap names](https://arynjennen1989-stack.github.io/guides/how-we-find-open-cheap-names.html)
+- [Dead startups almost never drop their .com](https://arynjennen1989-stack.github.io/guides/dead-startups-keep-their-domains.html)
+
+## Data
+
+- [programs.json](https://arynjennen1989-stack.github.io/data/programs.json) — still-free vs dead programs
+- [open-cheap.json](https://arynjennen1989-stack.github.io/data/open-cheap.json) — last cheap-TLD snapshot
