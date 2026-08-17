@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-15",
-  "note": "Forever-free means no registration fee. You do not get a leftover .com. Freenom (.tk/.cf/.gq/.ga/.ml free regs) ended in 2024.",
+  "updated": "2026-08-17",
+  "note": "Forever-free means no registration fee. You do not get a leftover .com. Freenom (.tk/.cf/.gq/.ga/.ml free regs) ended in 2024. Year-1 cheap TLDs are not $0 forever.",
   "programs": [
     {
       "id": "eu-org",
@@ -25,6 +25,28 @@
       "check": "https://raw.githubusercontent.com/is-a-dev/register/main/domains/{slug}.json"
     },
     {
+      "id": "thedev-id",
+      "name": "thedev.id",
+      "suffix": "thedev.id",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Developers who want a personal identity hostname",
+      "how": "Fork thedev.id, add a CNAME file for your slug, open a pull request.",
+      "url": "https://thedev.id/",
+      "check": null
+    },
+    {
+      "id": "is-a-good-dev",
+      "name": "is-a-good.dev",
+      "suffix": "is-a-good.dev",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Developers; community-run, similar to is-a.dev",
+      "how": "Register via their site / GitHub flow. Confirm the register repo is live before you wait on a PR.",
+      "url": "https://is-a-good.dev/",
+      "check": null
+    },
+    {
       "id": "js-org",
       "name": "js.org",
       "suffix": "js.org",
@@ -45,6 +67,17 @@
       "how": "Create a repo named youruser.github.io. That is this site's host.",
       "url": "https://pages.github.com/",
       "check": "https://github.com/{slug}"
+    },
+    {
+      "id": "pages-dev",
+      "name": "Cloudflare Pages",
+      "suffix": "pages.dev",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone with a Cloudflare account",
+      "how": "Deploy a Pages project. You get project.pages.dev. Not a TLD you own.",
+      "url": "https://pages.cloudflare.com/",
+      "check": null
     },
     {
       "id": "netlify",
@@ -69,36 +102,47 @@
       "check": null
     },
     {
+      "id": "duckdns",
+      "name": "DuckDNS",
+      "suffix": "duckdns.org",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone who needs a stable hostname for a changing IP",
+      "how": "Log in with GitHub/Google and claim you.duckdns.org. Dynamic DNS, not a personal brand.",
+      "url": "https://www.duckdns.org/",
+      "check": null
+    },
+    {
+      "id": "cloudns",
+      "name": "ClouDNS free zone",
+      "suffix": "cloudns.org / .biz / .info / .us / .eu / .in",
+      "kind": "forever-free",
+      "cost": "$0 forever",
+      "who": "Anyone who wants a hostname plus DNS records",
+      "how": "Create a free account, add a Free Zone, pick a hostname on their shared suffixes.",
+      "url": "https://www.cloudns.net/wiki/article/31/",
+      "check": null
+    },
+    {
       "id": "pp-ua",
       "name": "pp.ua",
       "suffix": "pp.ua",
       "kind": "forever-free",
       "cost": "$0",
       "who": "Anyone who can complete their form",
-      "how": "Request a subdomain at the pp.ua registry pages.",
+      "how": "Request a subdomain at the pp.ua registry pages. Confirm current signup before you wait.",
       "url": "https://pp.ua/",
-      "check": null
-    },
-    {
-      "id": "thedev-id",
-      "name": "thedev.id",
-      "suffix": "thedev.id",
-      "kind": "forever-free",
-      "cost": "$0 forever",
-      "who": "Developers",
-      "how": "GitHub registration flow similar to is-a.dev.",
-      "url": "https://thedev.id/",
       "check": null
     },
     {
       "id": "open-domains",
       "name": "Open Domains",
-      "suffix": "is-a-fullstack.dev and others",
-      "kind": "forever-free",
-      "cost": "$0 forever",
-      "who": "Personal sites and open-source projects",
-      "how": "See open-domains.net / their GitHub register repo.",
-      "url": "https://open-domains.net/",
+      "suffix": "community suffixes (verify live)",
+      "kind": "verify",
+      "cost": "Listed as $0 — verify the live register repo",
+      "who": "Personal sites and open-source projects, if the original project is still the one answering",
+      "how": "js.org still points here. open-domains.net redirected to a different site in Aug 2026. Do not file a PR until you confirm the GitHub register repo.",
+      "url": "https://github.com/js-org/js.org/wiki/Similar-Services",
       "check": null
     },
     {

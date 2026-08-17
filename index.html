@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zero Dollar Domains — lost, dead, and cheap names you can still grab</title>
-  <meta name="description" content="Hunt names that are still unregistered on cheap TLDs, plus $0 programs (eu.org, is-a.dev). Live RDAP check. Not an expired-.com auction dump.">
+  <title>Zero Dollar Domains — hunt $0 programs and cheap open TLDs</title>
+  <meta name="description" content="Type a word. We check official RDAP plus still-free programs (eu.org, is-a.dev). Open cheap TLDs get a register link. Not an expired-.com dump.">
   <link rel="canonical" href="https://arynjennen1989-stack.github.io/">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Zero Dollar Domains — lost, dead, and cheap names">
-  <meta property="og:description" content="Live check for unused cheap TLDs and still-free subdomain programs.">
+  <meta property="og:title" content="Zero Dollar Domains — hunt $0 programs and cheap open TLDs">
+  <meta property="og:description" content="Live RDAP hunter. Open cheap names go to a registrar. $0 programs stay $0.">
   <meta property="og:url" content="https://arynjennen1989-stack.github.io/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/assets/style.css">
@@ -22,6 +22,7 @@
       <nav>
         <a class="brand" href="/">Zero Dollar Domains</a>
         <a href="/#hunt">Hunter</a>
+        <a href="/catalog.html">Catalog</a>
         <a href="/graveyard.html">Graveyard</a>
         <a href="/#open">Open cheap</a>
         <a href="/guides/">Guides</a>
@@ -30,10 +31,10 @@
     </div>
   </header>
   <main class="wrap">
-    <p class="meta">Updated 16 August 2026</p>
-    <h1>Lost, dead, or cheap. Not a leftover .com pile.</h1>
-    <p class="lede">Type a word. We ask the official registry (RDAP) if that name is still unregistered on cheap endings, and we check DNS to see if a taken name is actually dead. $0 forever still only exists as subdomains and eu.org.</p>
-    <p class="disclaimer">Expired .coms go to auction. We do not scrape those lists. “Open” on .xyz/.icu/.top means you can register it — usually about a dollar the first year, then a renewal. Re-check before you pay. We never register names for you.</p>
+    <p class="meta">Updated 17 August 2026</p>
+    <h1>Lost, dead, or cheap. Then actually grab it.</h1>
+    <p class="lede">Type a word. We ask the official registry (RDAP) if that name is still unregistered on cheap endings, check still-free programs, and hand you the claim link. $0 forever still only exists as subdomains and eu.org. A real TLD is year-1 cheap, not free.</p>
+    <p class="disclaimer">Expired .coms go to auction. We do not scrape those lists. “Open” on .xyz/.icu/.top means you can register it — often about a dollar the first year, then a renewal. Re-check the price on TLD-List before you pay. We never register names for you. Registrar buttons are search links, not an affiliate cookie, until an account is added.</p>
 
     <section class="finder" id="hunt">
       <label for="slug">Word to hunt (letters, numbers, hyphen)</label>
@@ -44,7 +45,7 @@
       <p class="meta" id="status"></p>
       <table id="hunt-table" hidden>
         <thead>
-          <tr><th>Name</th><th>Registry</th><th>DNS</th><th>What that means</th></tr>
+          <tr><th>Name</th><th>Registry</th><th>DNS</th><th>What that means</th><th>Next</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -56,6 +57,7 @@
     <p><a href="/guides/how-we-find-open-cheap-names.html">How this list is built</a></p>
 
     <h2 id="list">Still $0 forever</h2>
+    <p class="meta">Short list. The <a href="/catalog.html">full catalog</a> has DuckDNS, ClouDNS, thedev.id, js.org, and the dead Freenom row so you do not waste a week on it.</p>
     <table>
       <thead>
         <tr><th>Program</th><th>You get</th><th>Cost</th><th>Catch</th></tr>
@@ -74,6 +76,12 @@
           <td>GitHub pull request. Devs only.</td>
         </tr>
         <tr>
+          <td><a href="https://thedev.id/">thedev.id</a></td>
+          <td>you.thedev.id</td>
+          <td><span class="tag tag-free">$0 forever</span></td>
+          <td>GitHub PR. Personal developer sites.</td>
+        </tr>
+        <tr>
           <td><a href="https://pages.github.com/">GitHub Pages</a></td>
           <td>you.github.io</td>
           <td><span class="tag tag-free">$0 forever</span></td>
@@ -89,7 +97,7 @@
           <td>Freenom .tk / .cf / .gq</td>
           <td>—</td>
           <td><span class="tag tag-dead">dead</span></td>
-          <td>Free regs ended 2024. Skip.</td>
+          <td>Free regs ended 2024. <a href="/guides/freenom-alternatives-still-free-2026.html">What still works</a>.</td>
         </tr>
       </tbody>
     </table>
@@ -115,6 +123,16 @@
         <p>gpt.com, droid.com, vine.com — checked live. Still locked.</p>
         <a href="/guides/dead-startups-keep-their-domains.html">Read the checks</a>
       </article>
+      <article class="card">
+        <h3>Freenom alternatives still free</h3>
+        <p>eu.org, is-a.dev, FreeDNS, DuckDNS. Year-1 .xyz is not a replacement.</p>
+        <a href="/guides/freenom-alternatives-still-free-2026.html">Read the 2026 list</a>
+      </article>
+      <article class="card">
+        <h3>Full program catalog</h3>
+        <p>Every row we still stand behind, plus the ones we marked dead or “verify.”</p>
+        <a href="/catalog.html">Open the catalog</a>
+      </article>
     </div>
   </main>
   <footer>
@@ -124,12 +142,12 @@
   </footer>
   <script>
     const TLDS = [
-      { tld: "xyz", rdap: "https://rdap.centralnic.com/xyz", kind: "cheap" },
-      { tld: "icu", rdap: "https://rdap.centralnic.com/icu", kind: "cheap" },
-      { tld: "lol", rdap: "https://rdap.centralnic.com/lol", kind: "cheap" },
-      { tld: "online", rdap: "https://rdap.radix.host/rdap", kind: "cheap" },
-      { tld: "top", rdap: "https://rdap.zdnsgtld.com/top", kind: "cheap" },
-      { tld: "com", rdap: "https://rdap.verisign.com/com/v1", kind: "paid" }
+      { tld: "xyz", rdap: "https://rdap.centralnic.com/xyz", kind: "cheap", year1: "~$1–2 yr1" },
+      { tld: "icu", rdap: "https://rdap.centralnic.com/icu", kind: "cheap", year1: "promo / check" },
+      { tld: "lol", rdap: "https://rdap.centralnic.com/lol", kind: "cheap", year1: "promo / check" },
+      { tld: "online", rdap: "https://rdap.radix.host/rdap", kind: "cheap", year1: "~$1 yr1, ~$21 renew" },
+      { tld: "top", rdap: "https://rdap.zdnsgtld.com/top", kind: "cheap", year1: "~$1 yr1" },
+      { tld: "com", rdap: "https://rdap.verisign.com/com/v1", kind: "paid", year1: "~$6–10 yr1" }
     ];
     const input = document.getElementById("slug");
     const status = document.getElementById("status");
@@ -195,6 +213,14 @@
       return "Could not finish the check.";
     }
 
+    function registrarLinks(name) {
+      const q = encodeURIComponent(name);
+      const ship = "https://www.spaceship.com/domain-search/?query=" + q;
+      const bun = "https://porkbun.com/checkout/search?q=" + q;
+      const tld = "https://tld-list.com/";
+      return '<a href="' + ship + '" rel="noopener">Spaceship</a> · <a href="' + bun + '" rel="noopener">Porkbun</a> · <a href="' + tld + '" rel="noopener">prices</a>';
+    }
+
     async function hunt() {
       const slug = clean(input.value);
       if (!slug || slug.length < 2) {
@@ -208,28 +234,38 @@
       tbody.insertAdjacentHTML(
         "beforeend",
         "<tr><td><strong>" + esc(slug) + ".is-a.dev</strong></td><td>" + esc(isa) +
-          "</td><td>—</td><td>$0 if open. GitHub PR.</td></tr>"
+          "</td><td>—</td><td>$0 if open. GitHub PR.</td><td><a href=\"https://github.com/is-a-dev/register\" rel=\"noopener\">Claim</a></td></tr>"
       );
       tbody.insertAdjacentHTML(
         "beforeend",
         "<tr><td><strong>" + esc(slug) + ".eu.org</strong></td><td>request</td><td>—</td>" +
-          "<td>$0 forever if nic.eu.org approves. Manual, ~2 weeks.</td></tr>"
+          "<td>$0 forever if nic.eu.org approves. Manual, ~2 weeks.</td>" +
+          "<td><a href=\"https://nic.eu.org/\" rel=\"noopener\">Request</a></td></tr>"
+      );
+      tbody.insertAdjacentHTML(
+        "beforeend",
+        "<tr><td><strong>" + esc(slug) + ".thedev.id</strong></td><td>request</td><td>—</td>" +
+          "<td>$0 if they merge the PR. Devs, personal sites.</td>" +
+          "<td><a href=\"https://thedev.id/\" rel=\"noopener\">Claim</a></td></tr>"
       );
       for (const spec of TLDS) {
         const name = slug + "." + spec.tld;
         const tr = document.createElement("tr");
         tr.innerHTML =
-          "<td><strong>" + esc(name) + "</strong></td><td>…</td><td>…</td><td></td>";
+          "<td><strong>" + esc(name) + "</strong></td><td>…</td><td>…</td><td></td><td class=\"meta\">" + esc(spec.year1) + "</td>";
         tbody.appendChild(tr);
         const cells = tr.children;
         const [reg, dnsText] = await Promise.all([rdap(spec.rdap, name), dns(name)]);
         cells[1].textContent = reg;
         cells[2].textContent = dnsText;
         cells[3].textContent = meaning(reg, dnsText, spec.kind);
-        if (reg === "open") cells[1].innerHTML = '<span class="tag tag-free">open</span>';
+        if (reg === "open") {
+          cells[1].innerHTML = '<span class="tag tag-free">open</span>';
+          cells[4].innerHTML = registrarLinks(name);
+        }
         if (reg === "registered") cells[1].innerHTML = '<span class="tag tag-dead">taken</span>';
       }
-      status.textContent = "Done. Open ≠ leftover auction name. Buy only if you will use it.";
+      status.textContent = "Done. Open ≠ leftover auction name. $0 rows go to the program. Cheap rows go to a registrar search.";}
     }
 
     document.getElementById("go").addEventListener("click", hunt);
@@ -244,7 +280,12 @@
           "Last scan " + d.updated + " · " + (d.open || []).length +
           " names were unregistered on cheap TLDs. Live-check any of them in the box above.";
         document.getElementById("open-list").innerHTML = (d.open || [])
-          .map(function (n) { return "<li><code>" + esc(n) + "</code></li>"; })
+          .map(function (n) {
+            const q = encodeURIComponent(n);
+            return "<li><code>" + esc(n) + "</code> · <a href=\"https://www.spaceship.com/domain-search/?query=" +
+              q + "\" rel=\"noopener\">Spaceship</a> · <a href=\"https://porkbun.com/checkout/search?q=" +
+              q + "\" rel=\"noopener\">Porkbun</a></li>";
+          })
           .join("");
       })
       .catch(function () {

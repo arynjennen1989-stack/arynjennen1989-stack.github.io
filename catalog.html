@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Still-free domain programs — Zero Dollar Domains</title>
+  <meta name="description" content="Every $0 hostname program we still stand behind in 2026: eu.org, is-a.dev, FreeDNS, DuckDNS, ClouDNS, GitHub Pages. Freenom is dead. Year-1 cheap TLDs are not free.">
+  <link rel="canonical" href="https://arynjennen1989-stack.github.io/catalog.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Still-free domain programs — Zero Dollar Domains">
+  <meta property="og:description" content="Catalog of programs that still give a $0 domain or subdomain. Freenom is dead.">
+  <meta property="og:url" content="https://arynjennen1989-stack.github.io/catalog.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Still-free domain programs","url":"https://arynjennen1989-stack.github.io/catalog.html","dateModified":"2026-08-17","description":"Catalog of programs that still give a $0 domain or subdomain in 2026."}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">Zero Dollar Domains</a>
+        <a href="/#hunt">Hunter</a>
+        <a href="/catalog.html">Catalog</a>
+        <a href="/graveyard.html">Graveyard</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="meta">Updated 17 August 2026 · sourced from <a href="/data/programs.json">programs.json</a></p>
+    <h1>Programs that are still $0. Plus the ones that lie about it.</h1>
+    <p class="lede">This is the full catalog the homepage table used to hide. Forever-free means no registration fee. You still do not own a leftover .com. We drop a row the day a program dies or starts charging.</p>
+    <p class="disclaimer">Open Domains’ old homepage redirected to a different site when we checked it in August 2026. It stays in the “verify” pile until the original register repo is confirmed live. We will not send you to a clone.</p>
+
+    <p class="meta" id="cat-meta">Loading catalog…</p>
+    <table id="cat-table">
+      <thead>
+        <tr><th>Program</th><th>You get</th><th>Cost</th><th>Who it’s for</th><th>How</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Want a real TLD instead?</h2>
+    <p>If you will pay year one, hunt the slug on the <a href="/#hunt">homepage hunter</a>. Open .xyz / .icu / .top / .online names go to Spaceship or Porkbun search — first year is often about a dollar, renewal is not. Compare live prices on <a href="https://tld-list.com/">TLD-List</a> before you pay. We do not register names for you.</p>
+    <p>If you typed “freenom alternative,” start with <a href="/guides/freenom-alternatives-still-free-2026.html">the 2026 list</a>.</p>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>Zero Dollar Domains · We do not register names · Dead programs stay listed so you do not waste a week on them.</p>
+    </div>
+  </footer>
+  <script>
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+      });
+    }
+    function tagFor(kind) {
+      if (kind === "forever-free") return '<span class="tag tag-free">$0 forever</span>';
+      if (kind === "dead") return '<span class="tag tag-dead">dead</span>';
+      return '<span class="tag tag-promo">verify</span>';
+    }
+    fetch("/data/programs.json")
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        document.getElementById("cat-meta").textContent =
+          "Last check " + d.updated + " · " + (d.programs || []).length + " rows.";
+        document.querySelector("#cat-table tbody").innerHTML = (d.programs || []).map(function (p) {
+          return "<tr><td><a href=\"" + esc(p.url) + "\" rel=\"noopener\">" + esc(p.name) +
+            "</a></td><td><code>" + esc(p.suffix) + "</code></td><td>" + tagFor(p.kind) +
+            "<div class=\"meta\">" + esc(p.cost) + "</div></td><td>" + esc(p.who) +
+            "</td><td>" + esc(p.how) + "</td></tr>";
+        }).join("");
+      })
+      .catch(function () {
+        document.getElementById("cat-meta").textContent = "Catalog failed to load.";
+      });
+  </script>
+</body>
+</html>

@@ -1,15 +1,15 @@
 # Zero Dollar Domains
 
-> Catalog of programs that still give a $0 domain or subdomain, plus a live RDAP hunter for unused cheap-TLD names. Not an expired-.com auction dump. Not Freenom leftovers.
+> Catalog of programs that still give a $0 domain or subdomain, plus a live RDAP hunter for unused cheap-TLD names. Open cheap names get a registrar search link. Not an expired-.com auction dump. Not Freenom leftovers.
 
 Site: https://arynjennen1989-stack.github.io/
 
 ## What this is
 
 - Live RDAP checks against official registries (404 = unregistered, not “expired premium”).
-- A snapshot of cheap-TLD names that were unregistered at last scan.
+- A snapshot of cheap-TLD names that were unregistered at last scan, with Spaceship / Porkbun search links.
 - A graveyard of famous .coms that people assume dropped. They almost never did.
-- Honest split: forever-free (eu.org, is-a.dev, github.io, FreeDNS) vs year-1 cheap (.xyz / .icu / .top).
+- Honest split: forever-free (eu.org, is-a.dev, thedev.id, github.io, FreeDNS, DuckDNS, ClouDNS) vs year-1 cheap (.xyz / .icu / .top).
 
 ## What this is not
 
@@ -19,13 +19,15 @@ Site: https://arynjennen1989-stack.github.io/
 
 ## Pages
 
-- [Home / hunter](https://arynjennen1989-stack.github.io/): type a word, check cheap TLDs + DNS.
+- [Home / hunter](https://arynjennen1989-stack.github.io/): type a word, check cheap TLDs + DNS, then claim or buy.
+- [Catalog](https://arynjennen1989-stack.github.io/catalog.html): every $0 program we still stand behind.
 - [Guides](https://arynjennen1989-stack.github.io/guides/): how to claim the $0 programs, and why leftover .coms are not free.
 - [Graveyard](https://arynjennen1989-stack.github.io/graveyard.html): live RDAP on famous shutdown .coms.
 - [About](https://arynjennen1989-stack.github.io/about.html)
 
 ## Guides
 
+- [Freenom alternatives still free in 2026](https://arynjennen1989-stack.github.io/guides/freenom-alternatives-still-free-2026.html)
 - [How to get a free eu.org domain](https://arynjennen1989-stack.github.io/guides/how-to-get-a-free-eu-org-domain.html)
 - [There is no pile of leftover $0 .coms](https://arynjennen1989-stack.github.io/guides/there-are-no-free-leftover-dotcoms.html)
 - [How we find open cheap names](https://arynjennen1989-stack.github.io/guides/how-we-find-open-cheap-names.html)
