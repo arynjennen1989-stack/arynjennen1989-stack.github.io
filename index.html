@@ -22,6 +22,7 @@
       <nav>
         <a class="brand" href="/">Zero Dollar Domains</a>
         <a href="/#hunt">Hunter</a>
+        <a href="/board.html">Board</a>
         <a href="/catalog.html">Catalog</a>
         <a href="/graveyard.html">Graveyard</a>
         <a href="/#open">Open cheap</a>
@@ -54,7 +55,7 @@
     <h2 id="open">Open cheap names (snapshot)</h2>
     <p class="meta" id="snap-meta">Loading last RDAP scan…</p>
     <ul id="open-list" class="plain"></ul>
-    <p><a href="/guides/how-we-find-open-cheap-names.html">How this list is built</a></p>
+    <p><a href="/board.html">Full board (open + dark)</a> · <a href="/guides/how-we-find-open-cheap-names.html">How this list is built</a></p>
 
     <h2 id="list">Still $0 forever</h2>
     <p class="meta">Short list. The <a href="/catalog.html">full catalog</a> has DuckDNS, ClouDNS, thedev.id, js.org, and the dead Freenom row so you do not waste a week on it.</p>
@@ -145,8 +146,16 @@
       { tld: "xyz", rdap: "https://rdap.centralnic.com/xyz", kind: "cheap", year1: "~$1–2 yr1" },
       { tld: "icu", rdap: "https://rdap.centralnic.com/icu", kind: "cheap", year1: "promo / check" },
       { tld: "lol", rdap: "https://rdap.centralnic.com/lol", kind: "cheap", year1: "promo / check" },
+      { tld: "cfd", rdap: "https://rdap.centralnic.com/cfd", kind: "cheap", year1: "promo / check" },
+      { tld: "sbs", rdap: "https://rdap.centralnic.com/sbs", kind: "cheap", year1: "promo / check" },
+      { tld: "cyou", rdap: "https://rdap.centralnic.com/cyou", kind: "cheap", year1: "promo / check" },
       { tld: "online", rdap: "https://rdap.radix.host/rdap", kind: "cheap", year1: "~$1 yr1, ~$21 renew" },
+      { tld: "site", rdap: "https://rdap.radix.host/rdap", kind: "cheap", year1: "~$1 yr1, ~$21 renew" },
+      { tld: "space", rdap: "https://rdap.radix.host/rdap", kind: "cheap", year1: "promo / check" },
+      { tld: "fun", rdap: "https://rdap.radix.host/rdap", kind: "cheap", year1: "promo / check" },
+      { tld: "pw", rdap: "https://rdap.radix.host/rdap", kind: "cheap", year1: "promo / check" },
       { tld: "top", rdap: "https://rdap.zdnsgtld.com/top", kind: "cheap", year1: "~$1 yr1" },
+      { tld: "click", rdap: "https://rdap.registry.click/rdap", kind: "cheap", year1: "~$1 yr1" },
       { tld: "com", rdap: "https://rdap.verisign.com/com/v1", kind: "paid", year1: "~$6–10 yr1" }
     ];
     const input = document.getElementById("slug");
@@ -265,7 +274,7 @@
         }
         if (reg === "registered") cells[1].innerHTML = '<span class="tag tag-dead">taken</span>';
       }
-      status.textContent = "Done. Open ≠ leftover auction name. $0 rows go to the program. Cheap rows go to a registrar search.";}
+      status.textContent = "Done. Open ≠ leftover auction name. $0 rows go to the program. Cheap rows go to a registrar search.";
     }
 
     document.getElementById("go").addEventListener("click", hunt);
@@ -276,11 +285,16 @@
     fetch("/data/open-cheap.json")
       .then(function (r) { return r.json(); })
       .then(function (d) {
+        var open = d.open || [];
+        var preview = open.slice(0, 24);
         document.getElementById("snap-meta").textContent =
-          "Last scan " + d.updated + " · " + (d.open || []).length +
-          " names were unregistered on cheap TLDs. Live-check any of them in the box above.";
-        document.getElementById("open-list").innerHTML = (d.open || [])
-          .map(function (n) {
+          "Last scan " + d.updated + " · " + open.length +
+          " unregistered on cheap TLDs" +
+          (d.dark_count ? " · " + d.dark_count + " dark (taken, no NS)" : "") +
+          ". First " + preview.length + " below. Full list on the board.";
+        document.getElementById("open-list").innerHTML = preview
+          .map(function (item) {
+            var n = typeof item === "string" ? item : item.name;
             const q = encodeURIComponent(n);
             return "<li><code>" + esc(n) + "</code> · <a href=\"https://www.spaceship.com/domain-search/?query=" +
               q + "\" rel=\"noopener\">Spaceship</a> · <a href=\"https://porkbun.com/checkout/search?q=" +

@@ -1,38 +1,990 @@
 {
-  "updated": "2026-08-15",
-  "method": "RDAP GET /domain/{name}. HTTP 404 = not in the registry (available). HTTP 200 = registered. Snapshot only — re-check before you pay.",
-  "disclaimer": "These are unused cheap TLDs, not leftover .coms and not auction drops. Year-1 promo prices move. Renewals are not $0.",
+  "updated": "2026-08-17",
+  "method": "RDAP GET /domain/{name} on official registry servers. HTTP 404 = not in the registry (available). HTTP 200 = registered. Dark = registered + DNS NXDOMAIN/no NS.",
+  "disclaimer": "Our own word list \u00d7 cheap TLDs. Not leftover .coms, not auction drops, not Freenom leftovers. Open = year-1 cheap, not $0 forever. Dark = looks dead, still not free. Re-check before you pay. We never register names.",
   "tlds": [
-    {"tld": "xyz", "rdap": "https://rdap.centralnic.com/xyz", "year1": "often ~$1–3 promo", "renew": "usually more than year 1"},
-    {"tld": "icu", "rdap": "https://rdap.centralnic.com/icu", "year1": "often under $2 promo", "renew": "check before you buy"},
-    {"tld": "lol", "rdap": "https://rdap.centralnic.com/lol", "year1": "often cheap promo", "renew": "check before you buy"},
-    {"tld": "online", "rdap": "https://rdap.radix.host/rdap", "year1": "sometimes $0.99", "renew": "can jump hard (~$30+)"},
-    {"tld": "top", "rdap": "https://rdap.zdnsgtld.com/top", "year1": "sometimes $0.99", "renew": "often ~$5–7"}
+    {
+      "tld": "xyz",
+      "rdap": "https://rdap.centralnic.com/xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+"
+    },
+    {
+      "tld": "icu",
+      "rdap": "https://rdap.centralnic.com/icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "lol",
+      "rdap": "https://rdap.centralnic.com/lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "cfd",
+      "rdap": "https://rdap.centralnic.com/cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "sbs",
+      "rdap": "https://rdap.centralnic.com/sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "cyou",
+      "rdap": "https://rdap.centralnic.com/cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "online",
+      "rdap": "https://rdap.radix.host/rdap",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)"
+    },
+    {
+      "tld": "site",
+      "rdap": "https://rdap.radix.host/rdap",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)"
+    },
+    {
+      "tld": "space",
+      "rdap": "https://rdap.radix.host/rdap",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "fun",
+      "rdap": "https://rdap.radix.host/rdap",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "pw",
+      "rdap": "https://rdap.radix.host/rdap",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy"
+    },
+    {
+      "tld": "top",
+      "rdap": "https://rdap.zdnsgtld.com/top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137"
+    },
+    {
+      "tld": "click",
+      "rdap": "https://rdap.registry.click/rdap",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10"
+    }
   ],
+  "checked": 1222,
+  "open_count": 120,
+  "dark_count": 7,
+  "taken_seen": 116,
+  "unknown": 979,
   "open": [
-    "amberly.icu",
-    "amberly.lol",
-    "amberly.online",
-    "bricklot.xyz",
-    "bricklot.icu",
-    "bricklot.lol",
-    "bricklot.online",
-    "bricklot.top",
-    "coldwellx.xyz",
-    "coldwellx.icu",
-    "coldwellx.lol",
-    "coldwellx.online",
-    "coldwellx.top",
-    "duskpin.xyz",
-    "duskpin.icu",
-    "duskpin.lol",
-    "duskpin.online",
-    "duskpin.top",
-    "emberly.icu",
-    "fogbank.icu",
-    "fogbank.lol",
-    "fogbank.online",
-    "fogbank.top",
-    "gravelly.xyz"
+    {
+      "name": "amberly.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "amberly.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "amberly.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "bricklot.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "coldwellx.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "duskpin.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "state": "open"
+    },
+    {
+      "name": "emberly.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "emberly.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "emberly.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "emberly.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "emberly.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "emberly.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "fogbank.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "gravelly.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "state": "open"
+    },
+    {
+      "name": "hillock.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "hillock.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "hillock.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "hillock.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "inkwell.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "inkwell.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "inkwell.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "inkwell.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "inkwell.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "juniperx.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "state": "open"
+    },
+    {
+      "name": "keelson.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.click",
+      "tld": "click",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$10",
+      "state": "open"
+    },
+    {
+      "name": "keelson.cyou",
+      "tld": "cyou",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.fun",
+      "tld": "fun",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "keelson.pw",
+      "tld": "pw",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.sbs",
+      "tld": "sbs",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.site",
+      "tld": "site",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "state": "open"
+    },
+    {
+      "name": "keelson.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "keelson.top",
+      "tld": "top",
+      "year1": "sometimes ~$1",
+      "renew": "often ~$3\u20137",
+      "state": "open"
+    },
+    {
+      "name": "lampwick.icu",
+      "tld": "icu",
+      "year1": "often under $2 promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "lampwick.lol",
+      "tld": "lol",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "state": "open"
+    },
+    {
+      "name": "lampwick.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "state": "open"
+    }
+  ],
+  "dark": [
+    {
+      "name": "elkhorn.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "dns": "no-ns",
+      "state": "dark"
+    },
+    {
+      "name": "fogbank.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "dns": "no-ns",
+      "state": "dark"
+    },
+    {
+      "name": "goldleaf.space",
+      "tld": "space",
+      "year1": "sometimes cheap promo",
+      "renew": "check before you buy",
+      "dns": "no-ns",
+      "state": "dark"
+    },
+    {
+      "name": "oakling.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "dns": "no-ns",
+      "state": "dark"
+    },
+    {
+      "name": "tidepool.cfd",
+      "tld": "cfd",
+      "year1": "often cheap promo",
+      "renew": "check before you buy",
+      "dns": "no-ns",
+      "state": "dark"
+    },
+    {
+      "name": "windrow.xyz",
+      "tld": "xyz",
+      "year1": "often ~$1\u20132 promo",
+      "renew": "often ~$10+",
+      "dns": "no-ns",
+      "state": "dark"
+    },
+    {
+      "name": "yellowfin.online",
+      "tld": "online",
+      "year1": "sometimes ~$1",
+      "renew": "can jump hard (~$21+)",
+      "dns": "no-ns",
+      "state": "dark"
+    }
   ]
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open cheap names board — Zero Dollar Domains</title>
+  <meta name="description" content="Our own RDAP harvest of unregistered cheap TLDs plus dark-but-taken names. Not leftover .coms, not Freenom, not an auction dump. Year-1 cheap, not $0 forever.">
+  <link rel="canonical" href="https://arynjennen1989-stack.github.io/board.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Open cheap names board — Zero Dollar Domains">
+  <meta property="og:description" content="Live RDAP snapshot: unregistered cheap TLDs you can still buy year one, and dark names that look dead but are not free.">
+  <meta property="og:url" content="https://arynjennen1989-stack.github.io/board.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Open cheap names board","url":"https://arynjennen1989-stack.github.io/board.html","dateModified":"2026-08-17","description":"RDAP snapshot of unregistered cheap TLDs and dark-but-taken names."}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">Zero Dollar Domains</a>
+        <a href="/#hunt">Hunter</a>
+        <a href="/board.html">Board</a>
+        <a href="/catalog.html">Catalog</a>
+        <a href="/graveyard.html">Graveyard</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="meta" id="meta">Loading last RDAP scan…</p>
+    <h1>The pile we can actually gather.</h1>
+    <p class="lede">This is as close as the original “scrape $0 domains” ask gets without lying. We invented a word list, asked official registries (RDAP) if each name exists, and listed the misses. Open = unregistered on a cheap TLD. Dark = registered with no nameservers — looks dead, still not free.</p>
+    <p class="disclaimer">Not leftover .coms. Not Freenom .tk leftovers. Not ExpiredDomains / auction feeds / WHOIS dumps. We do not register these for you. Year-1 promo is often about a dollar; renewal is the real price. Re-check RDAP and TLD-List before you pay.</p>
+
+    <p><a href="/#hunt">Hunt your own word</a> · <a href="/guides/how-we-find-open-cheap-names.html">How the scan works</a> · <a href="/data/open-cheap.json">Raw JSON</a></p>
+
+    <h2 id="open">Open (unregistered)</h2>
+    <p class="meta" id="open-meta"></p>
+    <table>
+      <thead><tr><th>Name</th><th>Year-1</th><th>Renewal</th><th>Buy</th></tr></thead>
+      <tbody id="open-body"></tbody>
+    </table>
+
+    <h2 id="dark">Dark (registered, no NS)</h2>
+    <p class="meta">Looks abandoned. The owner still has it until it expires and goes through deletion or auction. Not a $0 grab.</p>
+    <table>
+      <thead><tr><th>Name</th><th>DNS</th><th>Read</th></tr></thead>
+      <tbody id="dark-body"></tbody>
+    </table>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>Zero Dollar Domains · Official RDAP only · We never register names.</p>
+    </div>
+  </footer>
+  <script>
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c];
+      });
+    }
+    function asName(item) {
+      return typeof item === "string" ? item : (item && item.name) || "";
+    }
+    function buy(name) {
+      var q = encodeURIComponent(name);
+      return '<a href="https://www.spaceship.com/domain-search/?query=' + q +
+        '" rel="noopener">Spaceship</a> · <a href="https://porkbun.com/checkout/search?q=' +
+        q + '" rel="noopener">Porkbun</a>';
+    }
+    fetch("/data/open-cheap.json")
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var open = d.open || [];
+        var dark = d.dark || [];
+        document.getElementById("meta").textContent =
+          "Scan " + d.updated + " · " + open.length + " open · " + dark.length +
+          " dark · " + (d.checked || "?") + " checks · official RDAP only.";
+        document.getElementById("open-meta").textContent =
+          open.length + " names the registry had no record for. Promo prices move.";
+        document.getElementById("open-body").innerHTML = open.map(function (item) {
+          var name = asName(item);
+          var y1 = item.year1 || "promo / check";
+          var ren = item.renew || "not $0";
+          return "<tr><td><code>" + esc(name) + "</code></td><td>" + esc(y1) +
+            "</td><td>" + esc(ren) + "</td><td>" + buy(name) + "</td></tr>";
+        }).join("");
+        document.getElementById("dark-body").innerHTML = dark.map(function (item) {
+          var name = asName(item);
+          return "<tr><td><code>" + esc(name) + "</code></td><td>" +
+            esc(item.dns || "no-ns") + "</td><td>Taken. Not leftover. Not free.</td></tr>";
+        }).join("") || "<tr><td colspan=\"3\">None in this scan.</td></tr>";
+      })
+      .catch(function () {
+        document.getElementById("meta").textContent = "Snapshot failed to load.";
+      });
+  </script>
+</body>
+</html>
