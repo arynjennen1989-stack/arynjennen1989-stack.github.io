@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zero Dollar Domains — Guides</title>
+  <link href="https://arynjennen1989-stack.github.io/guides/atom.xml" rel="self"/>
+  <link href="https://arynjennen1989-stack.github.io/guides/"/>
+  <updated>2026-08-17T00:00:00Z</updated>
+  <id>https://arynjennen1989-stack.github.io/guides/</id>
+  <author><name>Aryn Jennen</name></author>
+  <entry>
+    <title>Freenom alternatives that are still free in 2026</title>
+    <link href="https://arynjennen1989-stack.github.io/guides/freenom-alternatives-still-free-2026.html"/>
+    <id>https://arynjennen1989-stack.github.io/guides/freenom-alternatives-still-free-2026.html</id>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary>Freenom free .tk/.cf/.gq/.ga/.ml regs ended in 2024. What still costs $0: eu.org, is-a.dev, FreeDNS, DuckDNS, ClouDNS.</summary>
+  </entry>
+  <entry>
+    <title>Dead startups almost never drop their .com</title>
+    <link href="https://arynjennen1989-stack.github.io/guides/dead-startups-keep-their-domains.html"/>
+    <id>https://arynjennen1989-stack.github.io/guides/dead-startups-keep-their-domains.html</id>
+    <updated>2026-08-16T00:00:00Z</updated>
+    <summary>gpt.com, droid.com, vine.com, quibi.com, homejoy.com — all still registered.</summary>
+  </entry>
+  <entry>
+    <title>How we find open cheap domain names</title>
+    <link href="https://arynjennen1989-stack.github.io/guides/how-we-find-open-cheap-names.html"/>
+    <id>https://arynjennen1989-stack.github.io/guides/how-we-find-open-cheap-names.html</id>
+    <updated>2026-08-16T00:00:00Z</updated>
+    <summary>RDAP 404 means a name is not in the registry. That is not an expired-.com scrape.</summary>
+  </entry>
+  <entry>
+    <title>How to get a free eu.org domain (2026)</title>
+    <link href="https://arynjennen1989-stack.github.io/guides/how-to-get-a-free-eu-org-domain.html"/>
+    <id>https://arynjennen1989-stack.github.io/guides/how-to-get-a-free-eu-org-domain.html</id>
+    <updated>2026-08-16T00:00:00Z</updated>
+    <summary>eu.org has given out free third-level domains since 1996. How to request one.</summary>
+  </entry>
+  <entry>
+    <title>There is no pile of leftover $0 .com domains</title>
+    <link href="https://arynjennen1989-stack.github.io/guides/there-are-no-free-leftover-dotcoms.html"/>
+    <id>https://arynjennen1989-stack.github.io/guides/there-are-no-free-leftover-dotcoms.html</id>
+    <updated>2026-08-16T00:00:00Z</updated>
+    <summary>Expired .coms go to auction. Freenom free regs ended in 2024.</summary>
+  </entry>
+</feed>

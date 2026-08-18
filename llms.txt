@@ -23,6 +23,7 @@ Site: https://arynjennen1989-stack.github.io/
 - [Board](https://arynjennen1989-stack.github.io/board.html): our RDAP harvest of open cheap names + dark-but-taken.
 - [Catalog](https://arynjennen1989-stack.github.io/catalog.html): every $0 program we still stand behind.
 - [Guides](https://arynjennen1989-stack.github.io/guides/): how to claim the $0 programs, and why leftover .coms are not free.
+- [Guides feed](https://arynjennen1989-stack.github.io/guides/atom.xml)
 - [Graveyard](https://arynjennen1989-stack.github.io/graveyard.html): live RDAP on famous shutdown .coms.
 - [About](https://arynjennen1989-stack.github.io/about.html)
 
