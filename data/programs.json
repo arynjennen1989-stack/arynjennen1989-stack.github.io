@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-17",
-  "note": "Forever-free means no registration fee. You do not get a leftover .com. Freenom (.tk/.cf/.gq/.ga/.ml free regs) ended in 2024. Year-1 cheap TLDs are not $0 forever.",
+  "updated": "2026-08-21",
+  "note": "Forever-free means no registration fee. You do not get a leftover .com. Freenom (.tk/.cf/.gq/.ga/.ml free regs) ended in 2024. Year-1 cheap TLDs are not $0 forever. Rechecked 2026-08-21.",
   "programs": [
     {
       "id": "eu-org",
@@ -9,7 +9,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Anyone; aimed at people and nonprofits who cannot pay a NIC",
-      "how": "Request at nic.eu.org. Approval often takes about two weeks. Not the European Union.",
+      "how": "Request at nic.eu.org. Approval often takes about two weeks. Not the European Union. Site still live 21 Aug 2026.",
       "url": "https://nic.eu.org/",
       "check": null
     },
@@ -20,7 +20,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Developers with a GitHub account",
-      "how": "Open a pull request on the is-a-dev/register repo. Check the box on this page first.",
+      "how": "Open a pull request on is-a-dev/register. Repo was merging PRs 20 Aug 2026. They also launched .is-a.bot — same GitHub org, separate claim.",
       "url": "https://is-a.dev/",
       "check": "https://raw.githubusercontent.com/is-a-dev/register/main/domains/{slug}.json"
     },
@@ -31,7 +31,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Developers who want a personal identity hostname",
-      "how": "Fork thedev.id, add a CNAME file for your slug, open a pull request.",
+      "how": "Fork thedev.id, add a CNAME file for your slug, open a pull request. thedev.id now redirects to upset.dev/thedev.id; GitHub repo still unarchived.",
       "url": "https://thedev.id/",
       "check": null
     },
@@ -42,7 +42,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Developers; community-run, similar to is-a.dev",
-      "how": "Register via their site / GitHub flow. Confirm the register repo is live before you wait on a PR.",
+      "how": "PR on is-a-good-dev/register. Repo was merging PRs as of 19 Aug 2026 — it is live.",
       "url": "https://is-a-good.dev/",
       "check": null
     },
@@ -53,7 +53,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "JavaScript projects only — they turned down personal blogs",
-      "how": "Pull request on js-org/js.org. Need a real JS project.",
+      "how": "Pull request on js-org/js.org. Need a real JS project. Repo was merging PRs 19 Aug 2026.",
       "url": "https://js.org/",
       "check": null
     },
@@ -75,7 +75,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Anyone with a Cloudflare account",
-      "how": "Deploy a Pages project. You get project.pages.dev. Not a TLD you own.",
+      "how": "Deploy a Pages project. You get project.pages.dev. Not a TLD you own. Marketing URL redirects to cloudflare.com/products/pages.",
       "url": "https://pages.cloudflare.com/",
       "check": null
     },
@@ -97,7 +97,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Anyone; public shared domains get a random-looking host",
-      "how": "Sign up at freedns.afraid.org and claim a subdomain on a shared domain.",
+      "how": "Sign up at freedns.afraid.org and claim a subdomain on a shared domain. Site still live 21 Aug 2026.",
       "url": "https://freedns.afraid.org/",
       "check": null
     },
@@ -119,7 +119,7 @@
       "kind": "forever-free",
       "cost": "$0 forever",
       "who": "Anyone who wants a hostname plus DNS records",
-      "how": "Create a free account, add a Free Zone, pick a hostname on their shared suffixes.",
+      "how": "Create a free account, add a Free Zone, pick a hostname on their shared suffixes. Wiki article/31 still 200.",
       "url": "https://www.cloudns.net/wiki/article/31/",
       "check": null
     },
@@ -130,7 +130,7 @@
       "kind": "forever-free",
       "cost": "$0",
       "who": "Anyone who can complete their form",
-      "how": "Request a subdomain at the pp.ua registry pages. Confirm current signup before you wait.",
+      "how": "pp.ua still serves the signup pages (21 Aug 2026). They tell you to check availability on dig.ua, then use their register/activate forms. Do not invent Telegram or phone rules.",
       "url": "https://pp.ua/",
       "check": null
     },
@@ -139,10 +139,21 @@
       "name": "Open Domains",
       "suffix": "community suffixes (verify live)",
       "kind": "verify",
-      "cost": "Listed as $0 — verify the live register repo",
-      "who": "Personal sites and open-source projects, if the original project is still the one answering",
-      "how": "js.org still points here. open-domains.net redirected to a different site in Aug 2026. Do not file a PR until you confirm the GitHub register repo.",
-      "url": "https://github.com/js-org/js.org/wiki/Similar-Services",
+      "cost": "Marketed as $0 on a new site — GitHub register is archived",
+      "who": "Students and open-source projects, if the new platform is the same project",
+      "how": "Do not open a GitHub PR. open-domains/register is archived (checked 21 Aug 2026). README says the service moved to open-domains.com; open-domains.net meta-refreshes there. Existing GitHub names stay live but cannot be edited via GitHub. We do not treat the new site as confirmed $0.",
+      "url": "https://github.com/open-domains/register",
+      "check": null
+    },
+    {
+      "id": "cluster-ws",
+      "name": "cluster.ws / wip.la (Olivr)",
+      "suffix": "cluster.ws / wip.la",
+      "kind": "dead",
+      "cost": "Not working",
+      "who": "Nobody — maintainer says the zones hit Cloudflare’s 1,000-record limit",
+      "how": "Olivr/free-domain README (checked 21 Aug 2026): CURRENTLY THIS IS NOT WORKING ANYMORE. Last commits are Dec 2025. Do not file a PR.",
+      "url": "https://github.com/Olivr/free-domain",
       "check": null
     },
     {
@@ -152,7 +163,7 @@
       "kind": "dead",
       "cost": "Not free anymore",
       "who": "Nobody — free regs ended 2024 after Meta sued. 2026: paid again, not $0.",
-      "how": "Do not chase leftover Freenom names. They are not a free pile.",
+      "how": "Do not chase leftover Freenom names. They are not a free pile. freenom.com still redirects to a paid domain panel.",
       "url": "https://www.freenom.com/",
       "check": null
     }
