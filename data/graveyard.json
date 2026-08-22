@@ -1,21 +1,21 @@
 {
-  "updated": "2026-08-16",
-  "note": "RDAP snapshots. Taken means registered, not leftover. We do not hunt lookalikes of living retailers.",
+  "updated": "2026-08-22",
+  "note": "Live RDAP recheck 2026-08-22. Taken means registered, not leftover. We do not hunt lookalikes of living retailers.",
   "names": [
-    {"name": "gpt.com", "state": "taken", "expires": "2028-03-26", "ns": "Cloudflare", "note": "Forwards to chatgpt.com. MarkMonitor. Locked."},
+    {"name": "gpt.com", "state": "taken", "expires": "2028-03-26", "ns": "Cloudflare", "note": "Forwards to chatgpt.com. MarkMonitor. Locked. Last RDAP change 2026-02-27."},
     {"name": "droid.com", "state": "taken", "expires": "2027-07-16", "ns": "CSC corporate", "note": "Forwards to starwars.com. Server-delete prohibited."},
-    {"name": "siri.com", "state": "taken", "expires": "2026-12-11", "ns": "Apple", "note": "Apple still holds it."},
-    {"name": "kindle.com", "state": "taken", "expires": "2027-10-16", "ns": "Amazon", "note": "Amazon."},
-    {"name": "prime.com", "state": "taken", "expires": "2027-03-05", "ns": "MarkMonitor", "note": "Corporate lock."},
+    {"name": "siri.com", "state": "taken", "expires": "2026-12-11", "ns": "Apple", "note": "Apple still holds it. Expires Dec 2026 — they will renew."},
+    {"name": "kindle.com", "state": "taken", "expires": "2027-10-16", "ns": "Amazon", "note": "Amazon. Server-delete prohibited."},
+    {"name": "prime.com", "state": "taken", "expires": "2027-03-05", "ns": "MarkMonitor", "note": "Corporate lock. Registered 1987."},
     {"name": "target.com", "state": "taken", "expires": "2028-01-01", "ns": "Akamai", "note": "Living retailer. Do not hunt lookalikes."},
-    {"name": "vine.com", "state": "taken", "expires": "2027-02-08", "ns": "Amazon", "note": "Dead app. Domain kept."},
+    {"name": "vine.com", "state": "taken", "expires": "2027-02-08", "ns": "Amazon", "note": "Dead app. Domain kept. Server-delete prohibited."},
     {"name": "quibi.com", "state": "taken", "expires": "2027-09-21", "ns": "Cloudflare", "note": "Dead startup. Domain kept."},
     {"name": "homejoy.com", "state": "taken", "expires": "2035-02-01", "ns": "DNSimple", "note": "Dead startup. Renewed out to 2035."},
-    {"name": "jet.com", "state": "taken", "expires": "2027-09-02", "ns": "Akamai", "note": "Walmart-acquired. Kept."},
-    {"name": "friendster.com", "state": "taken", "expires": "2030-03-22", "ns": "AWS", "note": "Dead social network. Still held."},
-    {"name": "altavista.com", "state": "taken", "expires": "2027-09-08", "ns": "Yahoo", "note": "Dead search engine. Yahoo still holds it."},
-    {"name": "subtl.ai", "state": "taken", "expires": "2029-06-20", "ns": "Afternic", "note": "Shutdown 2025. Now on a reseller parking lot, not free."},
-    {"name": "omedym.com", "state": "taken", "expires": "2027-05-03", "ns": "NameBright", "note": "Shutdown 2025. Parked, not dropped."},
-    {"name": "yupp.ai", "state": "taken", "expires": "2034-06-01", "ns": "Namecheap", "note": "Wound down 2026. Domain kept for years."}
+    {"name": "jet.com", "state": "taken", "expires": "2027-09-02", "ns": "Akamai", "note": "Walmart-acquired. Kept. Last RDAP change 2026-08-02."},
+    {"name": "friendster.com", "state": "taken", "expires": "2030-03-22", "ns": "AWS", "note": "Dead social network. Still held through 2030."},
+    {"name": "altavista.com", "state": "taken", "expires": "2027-09-08", "ns": "Yahoo", "note": "Dead search engine. Yahoo still holds it. Last RDAP change 2026-08-07."},
+    {"name": "subtl.ai", "state": "taken", "expires": "2029-06-20", "ns": "Afternic", "note": "Shutdown 2025. Still on a reseller parking lot, not free. Last RDAP change 2026-08-11."},
+    {"name": "omedym.com", "state": "taken", "expires": "2027-05-03", "ns": "NameBright", "note": "Shutdown 2025. Parked at NameBright, not dropped."},
+    {"name": "yupp.ai", "state": "taken", "expires": "2034-06-01", "ns": "Namecheap", "note": "Wound down 2026. Domain kept through 2034. Last RDAP change 2026-08-12."}
   ]
 }
